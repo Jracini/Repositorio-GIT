@@ -73,7 +73,7 @@ void detect_touch_sequence(){
 //Funcion para validar la contraseña. Tambien si es necesario cambiarla.
 // Corregimos la función con nombre y comparación correcta
 bool validate_pattern(){
-    const char password[max_sequence+1]= "LLLSSSLL";
+    const char password[max_sequence+1]= "LLLSSSLLL";
     bool valid = strncmp(input_sequence, password, max_sequence)==0;
 
     if (valid){
@@ -98,7 +98,7 @@ void app_main(){
     printf("Bienvenido al sistema de autenticacion basado en un patron tactil\n");
     printf("-----------------------------------------------------------------------------------------\n");
     printf("Para acceder es necesario de una contraseña basada en toques largos y toques cortos.\n");
-    printf("El programa toma en cuenta un toque corto entre 1 y 2 segundos y un toque largo de 3 segundos o más.\n");
+    printf("El programa toma en cuenta un toque corto entre 200 y 500ms y un toque largo de 700 ms a 1 segundo o más.\n");
     printf("-----------------------------------------------------------------------------------------\n");
     printf("Por favor, digite la constraseña: \n");
     
